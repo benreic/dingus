@@ -1,3 +1,3 @@
 #!/bin/bash
 
-GOARCH=amd64 GOOS=linux go build -o dingus main.go config.go log.go
+GOARCH=amd64 GOOS=linux go build -o ./dingus ./src/main.go ./src/config.go ./src/log.go
