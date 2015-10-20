@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"log"
@@ -17,7 +17,7 @@ var globalLog *log.Logger
  * @return  Logger
 **/
 
-func createLogger() *log.Logger {
+func NewLogger() *log.Logger {
 
 	if globalLog != nil {
 		return globalLog
@@ -47,23 +47,4 @@ func createLogger() *log.Logger {
 
 	globalLog = log.New(fi, "", log.Ldate|log.Ltime|log.Lmicroseconds|log.Lshortfile)
 	return globalLog
-}
-
-/**
- * Determines if a file exists on disk
- *
- * @author Ben Reichelt <ben.reichelt@gmail.com>
- *
- * @param   string    The full path to the file to test
- * @return  bool
-**/
-
-func fileExists(fullPath string) bool {
-
-	if _, err := os.Stat(fullPath); !os.IsNotExist(err) {
-		return true
-	}
-
-	return false
-
 }

@@ -1,4 +1,4 @@
-package main
+package config
 
 import (
 	"encoding/json"
@@ -7,7 +7,7 @@ import (
 
 var config interface{}
 
-func FromFile() map[string]interface{} {
+func NewConfigFromFile() map[string]interface{} {
 
 	if config != nil {
 		return config.(map[string]interface{})
@@ -23,11 +23,11 @@ func FromFile() map[string]interface{} {
 
 func ClientId() string {
 
-	config := FromFile()
+	config := NewConfigFromFile()
 	return config["client_id"].(string)
 }
 
 func ClientSecret() string {
-	config := FromFile()
+	config := NewConfigFromFile()
 	return config["client_secret"].(string)
 }
