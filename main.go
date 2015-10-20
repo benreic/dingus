@@ -30,7 +30,7 @@ func main() {
 	router.Static("/public", "./public")
 
 	// Listen and server on 0.0.0.0:8080
-	err := router.Run(":8080")
+	err := router.Run(":" + config.Port())
 
 	logger.Println("Stopping")
 

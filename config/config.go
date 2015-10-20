@@ -31,3 +31,8 @@ func ClientSecret() string {
 	config := NewConfigFromFile()
 	return config["client_secret"].(string)
 }
+
+func Port() string {
+	config := NewConfigFromFile()
+	return config["server_port"].(string)
+}
