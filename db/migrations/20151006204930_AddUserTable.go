@@ -11,6 +11,7 @@ func Up_20151006204930(txn *sql.Tx) {
 		"driver_id int(11) unsigned not null auto_increment, " +
 		"email varchar(255) not null, " +
 		"handle varchar(255) not null, " +
+		"password varchar(1000) not null, " +
 		"created_on datetime not null, " +
 		"PRIMARY KEY (driver_id)" +
 		") ENGINE=InnoDB"
