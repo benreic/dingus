@@ -48,3 +48,13 @@ func NewLogger() *log.Logger {
 	globalLog = log.New(fi, "", log.Ldate|log.Ltime|log.Lmicroseconds|log.Lshortfile)
 	return globalLog
 }
+
+func LogError(err error) {
+	logger := NewLogger()
+	logger.Println(err.Error())
+}
+
+func Log(message string) {
+	logger := NewLogger()
+	logger.Println(message)
+}
