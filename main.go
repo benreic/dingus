@@ -31,6 +31,7 @@ func main() {
 	protected := router.Group("/", middleware.AuthRequired)
 	{
 		protected.GET("/dashboard", controllers.Dashboard)
+		protected.POST("/logout", controllers.Logout)
 	}
 
 	// Listen and server on 0.0.0.0:8080
