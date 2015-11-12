@@ -36,3 +36,23 @@ func Port() string {
 	config := NewConfigFromFile()
 	return config["server_port"].(string)
 }
+
+func DbUsername() string {
+	config := NewConfigFromFile()
+	return config["db_username"].(string)
+}
+
+func DbPassword() string {
+	config := NewConfigFromFile()
+	return config["db_password"].(string)
+}
+
+func SessionAuthenticationKey() string {
+	config := NewConfigFromFile()
+	return config["session_authentication_key"].(string)
+}
+
+func SessionEncryptionKey() string {
+	config := NewConfigFromFile()
+	return config["session_encryption_key"].(string)
+}
