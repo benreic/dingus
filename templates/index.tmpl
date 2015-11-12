@@ -1,3 +1,24 @@
+{{ if .loggedIn }}
+Hey! You logged in as {{ .handle }}
+{{ end }}
 Hello. Sign up <a href="/sign-up">here</a>.
 
-<!--<p><a href="https://accounts.automatic.com/oauth/authorize/?client_id=1b931c42d00b02d00eac&response_type=code&scope=scope:public%20scope:user:profile%20scope:location%20scope:vehicle:profile%20scope:vehicle:events%20scope:trip%20scope:behavior%20" target="_blank"><img src="https://d1qbqqxx54sk5g.cloudfront.net/website/img/developer/buttons/signin-xlarge@2x.271d1595432a.png"/></a></p>-->
+<p>
+Or, Sign in:
+<form method="post" action="/login">
+<table border="0" cellpadding="10">
+<tr>
+	<td>Username:</td>
+	<td><input type="text" name="username" size="40" /></td>
+</tr>
+<tr>
+	<td>Password:</td>
+	<td><input type="password" name="passwd" size="40" /></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td><input type="submit" value="Sign In" /></td>
+</tr>
+</table>
+</form>
+</p>
